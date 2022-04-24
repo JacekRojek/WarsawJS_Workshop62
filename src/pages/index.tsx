@@ -3,6 +3,7 @@ import React from 'react';
 import { GetStaticProps } from 'next';
 
 import { BlogGallery, IBlogGalleryProps } from '../blog/BlogGallery';
+import Info from '../components/Info';
 import { Meta } from '../layout/Meta';
 import { IPaginationProps } from '../pagination/Pagination';
 import { Main } from '../templates/Main';
@@ -18,6 +19,7 @@ const Index = (props: IBlogGalleryProps) => (
       />
     }
   >
+    <Info text={'test'} />
     <BlogGallery posts={props.posts} pagination={props.pagination} />
   </Main>
 );

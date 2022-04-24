@@ -54,11 +54,10 @@ const DisplayPost = (props: IPostProps) => (
 
 export const getStaticPaths: GetStaticPaths<IPostUrl> = async () => {
   const posts = getAllPosts(['slug']);
-
   return {
-    paths: posts.map((post) => ({
+    paths: posts.map(({ slug }) => ({
       params: {
-        slug: post.slug,
+        slug,
       },
     })),
     fallback: false,

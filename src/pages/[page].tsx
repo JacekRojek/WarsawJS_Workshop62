@@ -3,6 +3,7 @@ import React from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { BlogGallery, IBlogGalleryProps } from '../blog/BlogGallery';
+import Info from '../components/Info';
 import { Meta } from '../layout/Meta';
 import { IPaginationProps } from '../pagination/Pagination';
 import { Main } from '../templates/Main';
@@ -16,6 +17,7 @@ type IPageUrl = {
 
 const PaginatePosts = (props: IBlogGalleryProps) => (
   <Main meta={<Meta title="Lorem ipsum" description="Lorem ipsum" />}>
+    <Info text="test" />
     <BlogGallery posts={props.posts} pagination={props.pagination} />
   </Main>
 );
