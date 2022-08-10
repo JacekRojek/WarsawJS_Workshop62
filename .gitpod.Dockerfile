@@ -1,2 +1,2 @@
-FROM archlinux
+FROM manjarolinux/base
 
